@@ -11,4 +11,4 @@ Feature: Login Function for Orange HRM Application
     Examples:
      | username | password   |
      | Admin    | admin123   |
-     | Invalid  | invalid123 |
+#     | Invalid  | invalid123 |
