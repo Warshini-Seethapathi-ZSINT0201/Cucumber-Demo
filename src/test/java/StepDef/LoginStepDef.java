@@ -18,11 +18,23 @@ public class LoginStepDef {
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
     }
 
-    @And("user enter {string} and {string}")
-    public void user_enter_username_and_password( String username, String password){
-            loginPage.enterUserName(username);
-            loginPage.enterPassword(password);
+    @And("user enter valid details")
+    public void user_enter_username_and_password(){
+
+        String jenkinsUsername = System.getProperty("username");
+        String jenkinsPassword = System.getProperty("password");
+
+            loginPage.enterUserName(jenkinsUsername);
+            loginPage.enterPassword(jenkinsPassword);
+
     }
+//    @And("user enter {string} and {string}")
+//    public void user_enter_username_and_password(String username , String password){
+
+//        loginPage.enterUserName(username);
+//        loginPage.enterPassword(password);
+//
+//    }
 
     @And("user clicks the login button")
     public void user_click_login(){
