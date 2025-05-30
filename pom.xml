@@ -76,7 +76,9 @@
         <version>3.0.0-M5</version>
         <configuration>
           <systemPropertyVariables>
+            <!--suppress UnresolvedMavenProperty -->
             <username>${username}</username>
+            <!--suppress UnresolvedMavenProperty -->
             <password>${password}</password>
           </systemPropertyVariables>
         </configuration>
