@@ -21,10 +21,13 @@ public class LoginStepDef {
     @And("user enter valid details")
     public void user_enter_username_and_password(){
 
-        String jenkinsUsername = System.getProperty("username");
-        String jenkinsPassword = System.getProperty("password");
+//        String jenkinsUsername = System.getProperty("username") ;
+//        String jenkinsPassword = System.getProperty("password") ;
 
-            loginPage.enterUserName(jenkinsUsername);
+        String jenkinsUsername = System.getProperty("username") != null ? System.getProperty("username") : "admin";
+        String jenkinsPassword = System.getProperty("password") != null ? System.getProperty("password") : "pass123";
+
+            loginPage.enterUserName( jenkinsUsername);
             loginPage.enterPassword(jenkinsPassword);
 
     }
